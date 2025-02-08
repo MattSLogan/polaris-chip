@@ -18,6 +18,13 @@
     }
     polaris-chip {
       margin: 16px;
+      --polaris-chip-background-color: azure;
+    }
+    a {
+      margin: 16px;
+      color: red;
+      background-color: azure;
+      padding: 50px;
     }
   </style>
   <title>polaris-chip / my-card</title>
@@ -31,6 +38,8 @@
   <polaris-chip title="Sports are the only thing that matter"></polaris-chip>
   <polaris-chip title="Grants and donations"></polaris-chip>
 
+  
+  <a href="https://psu.edu/" target="_blank">PSU</a>
   <h1>my-card</h1>
   <my-card></my-card>
 
@@ -38,5 +47,41 @@
   <script type="module" src="./src/polaris-chip.js"></script>
   <script type="module" src="./src/my-card.js"></script>
 </body>
+<h1>Basketball Player Cards</h1>
+
+<my-card 
+  title="LeBron James" 
+  image="https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png" 
+  description="The greatest player of all time, LeBron James continues to dominate the NBA with his versatility and leadership." 
+  link="https://www.basketball-reference.com/players/j/jamesle01.html">
+</my-card>
+
+<my-card 
+  title="Stephen Curry" 
+  image="https://cdn.nba.com/headshots/nba/latest/1040x760/201939.png" 
+  description="Revolutionizing the game with his three-point shooting, the Chef has changed how basketball is played." 
+  link="https://www.basketball-reference.com/players/c/curryst01.html">
+</my-card>
+
+<my-card 
+  title="Kevin Durant" 
+  image="https://cdn.nba.com/headshots/nba/latest/1040x760/201142.png" 
+  description="A prolific scorer and an elite all-around player, KD is one of the best forwards in NBA history." 
+  link="https://www.basketball-reference.com/players/d/duranke01.html">
+</my-card>
+
+<my-card 
+  title="Giannis Antetokounmpo" 
+  image="https://cdn.nba.com/headshots/nba/latest/1040x760/203507.png" 
+  description="The Greek Freak is known for his dominant athleticism, defense, and ability to drive to the basket." 
+  link="https://www.basketball-reference.com/players/a/antetgi01.html">
+</my-card>
+
+<my-card 
+  title="Nikola Jokić" 
+  image="https://cdn.nba.com/headshots/nba/latest/1040x760/203999.png" 
+  description="As one of the best passing big men ever, Jokić has redefined the center position with his unique skill set." 
+  link="https://www.basketball-reference.com/players/j/jokicni01.html">
+</my-card>
 
 </html>

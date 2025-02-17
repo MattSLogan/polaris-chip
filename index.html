@@ -1,16 +1,12 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="viewport" content="width=device-width, viewport-fit=cover" />
   <meta name="Description" content="Boilerplate for polaris chip">
   <base href="/">
-
   <style>
-    :root,
-    html,
-    body {
+    :root, html, body {
       margin: 0;
       padding: 0;
       font-family: sans-serif;
@@ -29,59 +25,70 @@
   </style>
   <title>polaris-chip / my-card</title>
 </head>
-
 <body>
   <h1>polaris-chip</h1>
-  <!-- this is going to do whatever the tag's defaults are -->
   <polaris-chip title="News of Record" link="https://psu.edu/"></polaris-chip>
   <polaris-chip title="Faculty and Staff"></polaris-chip>
   <polaris-chip title="Sports are the only thing that matter"></polaris-chip>
   <polaris-chip title="Grants and donations"></polaris-chip>
 
-  
   <a href="https://psu.edu/" target="_blank">PSU</a>
+  
   <h1>my-card</h1>
-  <my-card></my-card>
+  <button>Toggle</button>
 
-  <!-- this is what is bringing in the definition for this tag -->
+  <script>
+    const button = document.querySelector('button');
+    button.addEventListener('click', () => {
+      document.querySelectorAll('my-card').forEach(card => 
+        card.fancy = !card.fancy
+      );
+    });
+  </script>
+
+  <my-card fancy
+    title="Luka Doncic" 
+    image="https://th.bing.com/th/id/OIP._duxwrmMCw14enygzzyQBwHaE8?w=275&h=184&c=7&r=0&o=5&dpr=1.5&pid=1.7" 
+    link="https://hax.psu.edu">
+    <p><strong>Luka Doncic</strong> is a Slovenian professional basketball player known for his exceptional playmaking, scoring, and basketball IQ.</p>
+  </my-card>
+
+  <my-card 
+    title="LeBron James" 
+    image="https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png" 
+    link="https://www.basketball-reference.com/players/j/jamesle01.html">
+    <p><strong>LeBron James</strong> is a legendary basketball player, known for his all-around dominance.</p>
+  </my-card>
+
+  <my-card fancy
+    title="Stephen Curry" 
+    image="https://cdn.nba.com/headshots/nba/latest/1040x760/201939.png"  
+    link="https://www.basketball-reference.com/players/c/curryst01.html">
+    <p>Revolutionizing the game with his <strong>three-point shooting</strong>, Curry has changed how basketball is played.</p>
+  </my-card>
+
+  <my-card 
+    title="Kevin Durant" 
+    image="https://cdn.nba.com/headshots/nba/latest/1040x760/201142.png" 
+    link="https://www.basketball-reference.com/players/d/duranke01.html">
+    <p>A prolific scorer and an <strong>elite all-around player</strong>, KD is one of the best forwards in NBA history.</p>
+  </my-card>
+
+  <my-card fancy
+    title="Giannis Antetokounmpo" 
+    image="https://cdn.nba.com/headshots/nba/latest/1040x760/203507.png"  
+    link="https://www.basketball-reference.com/players/a/antetgi01.html">
+    <p><strong>The Greek Freak</strong> is known for his dominant athleticism, defense, and ability to drive to the basket.</p>
+  </my-card>
+
+  <my-card 
+    title="Nikola Jokić" 
+    image="https://cdn.nba.com/headshots/nba/latest/1040x760/203999.png" 
+    link="https://www.basketball-reference.com/players/j/jokicni01.html">
+    <p>As one of the best passing big men ever, <strong>Jokić has redefined the center position</strong> with his unique skill set.</p>
+  </my-card>
+
   <script type="module" src="./src/polaris-chip.js"></script>
   <script type="module" src="./src/my-card.js"></script>
 </body>
-<h1>Basketball Player Cards</h1>
-
-<my-card 
-  title="LeBron James" 
-  image="https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png" 
-  description="The greatest player of all time, LeBron James continues to dominate the NBA with his versatility and leadership." 
-  link="https://www.basketball-reference.com/players/j/jamesle01.html">
-</my-card>
-
-<my-card 
-  title="Stephen Curry" 
-  image="https://cdn.nba.com/headshots/nba/latest/1040x760/201939.png" 
-  description="Revolutionizing the game with his three-point shooting, the Chef has changed how basketball is played." 
-  link="https://www.basketball-reference.com/players/c/curryst01.html">
-</my-card>
-
-<my-card 
-  title="Kevin Durant" 
-  image="https://cdn.nba.com/headshots/nba/latest/1040x760/201142.png" 
-  description="A prolific scorer and an elite all-around player, KD is one of the best forwards in NBA history." 
-  link="https://www.basketball-reference.com/players/d/duranke01.html">
-</my-card>
-
-<my-card 
-  title="Giannis Antetokounmpo" 
-  image="https://cdn.nba.com/headshots/nba/latest/1040x760/203507.png" 
-  description="The Greek Freak is known for his dominant athleticism, defense, and ability to drive to the basket." 
-  link="https://www.basketball-reference.com/players/a/antetgi01.html">
-</my-card>
-
-<my-card 
-  title="Nikola Jokić" 
-  image="https://cdn.nba.com/headshots/nba/latest/1040x760/203999.png" 
-  description="As one of the best passing big men ever, Jokić has redefined the center position with his unique skill set." 
-  link="https://www.basketball-reference.com/players/j/jokicni01.html">
-</my-card>
-
 </html>
